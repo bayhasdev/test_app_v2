@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_app_v2/src/components/app_widgets.dart';
-import 'package:test_app_v2/src/ui/design/_design_page.dart';
-import 'package:test_app_v2/src/ui/ui_chalnge/ui_chalnge.dart';
-import 'package:test_app_v2/src/ui/widgets/widgets_page.dart';
+import 'package:test_app_v2/src/ui/design_page.dart';
+import 'package:test_app_v2/src/ui/ui_chalnge.dart';
+import 'package:test_app_v2/src/ui/widgets_page.dart';
 
 class MainPage extends StatefulWidget {
   static const String routeName = '/MainPage';

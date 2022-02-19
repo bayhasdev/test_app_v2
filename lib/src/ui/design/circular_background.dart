@@ -3,6 +3,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:test_app_v2/src/utilities/global_var.dart';
 
 class CircularBackgroundPage extends StatefulWidget {
   const CircularBackgroundPage();
@@ -13,7 +14,7 @@ class CircularBackgroundPage extends StatefulWidget {
 class _CircularBackgroundPageState extends State<CircularBackgroundPage> {
   @override
   Widget build(BuildContext context) {
-    print('%%%%%%%%%% main page rebuild');
+    GlobalVar.log('%%%%%%%%%% main page rebuild');
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan,
@@ -56,7 +57,7 @@ class BackgroundColor extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    print('%%%%%%%%%% BackgroundColor repaint');
+    GlobalVar.log('%%%%%%%%%% BackgroundColor repaint');
     final Random rand = Random(12345);
 
     for (int i = 0; i < 10000; i++) {
@@ -106,7 +107,7 @@ class _CursorPointerWidgetState extends State<CursorPointerWidget> {
   Offset _offset = Offset.zero;
   @override
   Widget build(BuildContext context) {
-    print('%%%%%%%%%% CursorPointerWidget rebuild');
+    GlobalVar.log('%%%%%%%%%% CursorPointerWidget rebuild');
     return Listener(
       onPointerDown: _updateOffset,
       onPointerMove: _updateOffset,
