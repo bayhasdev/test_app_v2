@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:test_app_v2/src/main_page.dart';
 
 void main() {
   // debugRepaintRainbowEnabled = true;
   // debugRepaintTextRainbowEnabled = true;
-  debugProfilePaintsEnabled = true;
-  debugRepaintRainbowEnabled = true;
-  debugPaintLayerBordersEnabled = true;
+  // debugProfilePaintsEnabled = true;
+  // debugRepaintRainbowEnabled = true;
+  // debugPaintLayerBordersEnabled = true;
   runApp(const MyApp());
 }
 
