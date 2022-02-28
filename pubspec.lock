@@ -69,11 +69,25 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  flutter_section_list:
+    dependency: "direct main"
+    description:
+      name: flutter_section_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_wall_layout:
+    dependency: "direct main"
+    description:
+      name: flutter_wall_layout
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   lints:
     dependency: transitive
     description:
@@ -130,6 +144,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.0.2"
+  scrollable_positioned_list:
+    dependency: "direct main"
+    description:
+      name: scrollable_positioned_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -193,4 +214,4 @@ packages:
     version: "2.1.1"
 sdks:
   dart: ">=2.16.1 <3.0.0"
-  flutter: ">=1.16.0"
+  flutter: ">=2.0.2"

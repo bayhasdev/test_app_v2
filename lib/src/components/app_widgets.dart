@@ -27,3 +27,21 @@ class ListViewSingleItem extends StatelessWidget {
     );
   }
 }
+
+class ListViewSectionHeader extends StatelessWidget {
+  final String title;
+
+  const ListViewSectionHeader({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.green,
+      child: Container(
+        padding: EdgeInsets.all(16),
+        alignment: Alignment.center,
+        child: Text(title, style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white)),
+      ),
+    );
+  }
+}
