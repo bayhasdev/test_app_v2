@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // checkerboardRasterCacheImages: true,
       // checkerboardOffscreenLayers: true,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF8c77ec)),
       ),
       home: const MainPage(),
     );
