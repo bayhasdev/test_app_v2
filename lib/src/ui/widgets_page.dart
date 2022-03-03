@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app_v2/src/components/app_widgets.dart';
+import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/widgets/forms/_forms_index.dart';
 import 'package:test_app_v2/src/ui/widgets/overlay_example/OverlayIndex.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/_scroll_and_list_index.dart';

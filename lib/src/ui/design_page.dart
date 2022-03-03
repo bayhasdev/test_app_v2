@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:test_app_v2/src/components/app_widgets.dart';
+import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/design/bottom_navigation/_bottom_navigation_index.dart';
 import 'package:test_app_v2/src/ui/design/circular_background.dart';
 

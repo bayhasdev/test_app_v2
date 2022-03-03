@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_app_v2/src/components/app_widgets.dart';
+import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/widgets/forms/ChipsDemoApp.dart';
 import 'package:test_app_v2/src/ui/widgets/forms/Payment-Card-Validation.dart';
 import 'package:test_app_v2/src/ui/widgets/forms/login_with_provider.dart';
