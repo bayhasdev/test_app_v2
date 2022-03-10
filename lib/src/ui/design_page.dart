@@ -6,13 +6,13 @@ import 'package:test_app_v2/src/ui/design/animation/_animation_index.dart';
 import 'package:test_app_v2/src/ui/design/bottom_navigation/_bottom_navigation_index.dart';
 import 'package:test_app_v2/src/ui/design/circular_background.dart';
 
-class DesigPage extends StatefulWidget {
+class DesignPage extends StatefulWidget {
   static const String routeName = '/DesigPage';
   @override
-  _DesigPageState createState() => _DesigPageState();
+  _DesignPageState createState() => _DesignPageState();
 }
 
-class _DesigPageState extends State<DesigPage> {
+class _DesignPageState extends State<DesignPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

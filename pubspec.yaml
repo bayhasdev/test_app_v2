@@ -34,6 +34,7 @@ dependencies:
   flutter_wall_layout: ^2.1.1
   photo_view: ^0.13.0
   provider: ^6.0.2
+  username_gen: ^1.0.4
   scrollable_positioned_list: ^0.2.3
 
 dev_dependencies:

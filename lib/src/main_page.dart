@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
         child: ListView(
           children: [
             ListViewSingleItem(title: 'widgets', navigationWidget: WidgetsPage()),
-            ListViewSingleItem(title: 'Desig Page', navigationWidget: DesigPage()),
+            ListViewSingleItem(title: 'design Page', navigationWidget: DesignPage()),
             ListViewSingleItem(title: 'UI Chalnage', navigationWidget: UIChalnage()),
           ],
         ),
