@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/design_page.dart';
+import 'package:test_app_v2/src/ui/example_page.dart';
 import 'package:test_app_v2/src/ui/ui_chalnge.dart';
 import 'package:test_app_v2/src/ui/widgets_page.dart';
 
@@ -25,6 +26,7 @@ class _MainPageState extends State<MainPage> {
             ListViewSingleItem(title: 'widgets', navigationWidget: WidgetsPage()),
             ListViewSingleItem(title: 'design Page', navigationWidget: DesignPage()),
             ListViewSingleItem(title: 'UI Chalnage', navigationWidget: UIChalnage()),
+            ListViewSingleItem(title: 'Example Page', navigationWidget: ExamplePage()),
           ],
         ),
       ),

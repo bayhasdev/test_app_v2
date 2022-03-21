@@ -7,6 +7,7 @@ import 'package:test_app_v2/src/ui/widgets/scroll_and_list/animated-lists-in-flu
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/listview_with_footer.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/parallax_effect_page.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/relative_scroll/builder_method/relative_scroll_page.dart';
+import 'package:test_app_v2/src/ui/widgets/scroll_and_list/scroll_appbar_bottom_navigation/_scroll_appbar_bottom_navigation.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/scroll_to_element.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/scrollable_positioned_list.dart';
 import 'package:test_app_v2/src/ui/widgets/scroll_and_list/section_list_demo.dart';
@@ -38,6 +39,7 @@ class ScrollAndListIndex extends StatelessWidget {
             ListViewSingleItem(title: 'Parallax Effect Page', navigationWidget: ParallaxEffectPage()),
             ListViewSingleItem(title: 'Stacked Item ListView ', navigationWidget: StackedItemListView()),
             ListViewSingleItem(title: 'Animated List ', navigationWidget: AnimatedListInFlutter()),
+            ListViewSingleItem(title: 'Scroll with Appbar And BottomNavigation ', navigationWidget: ScrollAppbarBottomNavigation()),
 
             ////////////////{ Section And Headers } ////////////////
             ListViewSectionHeader(title: 'Section And Headers'),
