@@ -1,5 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:flutter/material.dart';
+
 const String kAppName = 'Experients App';
 
 ////////////{ DateTime format Variable}
@@ -11,6 +13,8 @@ const String kTimeFormat = "hh:mm";
 const String kAssetSvgBase = "assets/svgs/";
 const String kAssetsImageBase = "assets/images/";
 const String kAssetsIconBase = "assets/icons/";
+
+final kColors = [Colors.red, Colors.amber, Colors.blue, Colors.brown, Colors.orange, Colors.cyan, Colors.purple];
 
 final Uint8List kTransparentImage = Uint8List.fromList(<int>[
   0x89,

@@ -1,6 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:test_app_v2/src/utilities/constants.dart';
+import '../../../main_imports.dart';
 
 class ListViewSingleItem extends StatelessWidget {
   final String title;
@@ -41,6 +43,24 @@ class ListViewSectionHeader extends StatelessWidget {
         padding: EdgeInsets.all(16),
         alignment: Alignment.center,
         child: Text(title, style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.white)),
+      ),
+    );
+  }
+}
+
+class BoxWidget extends StatelessWidget {
+  final int width;
+  final int height;
+  final Color? color;
+  const BoxWidget({this.width = 50, this.height = 80, this.color});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width.toDouble(),
+      height: height.toDouble(),
+      color: color ?? kColors.getRandomElement(),
+      child: FittedBox(
+        child: Text('$width x $height'),
       ),
     );
   }

@@ -14,7 +14,7 @@ class _NotchedBottomAppBarState extends State<NotchedBottomAppBar> with TickerPr
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: Duration(milliseconds: 750));
+    _controller = AnimationController(vsync: this, duration: Duration(milliseconds: 250));
     _animation = CurvedAnimation(parent: _controller, curve: Curves.linear);
   }
 

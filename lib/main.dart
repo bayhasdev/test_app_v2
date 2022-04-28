@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:test_app_v2/src/main_page.dart';
+import 'package:test_app_v2/src/ui/components/error_widget.dart';
 
 void main() {
+  ErrorWidget.builder = ErrorWidgets().materialErrorWidget;
   // debugRepaintRainbowEnabled = true;
   // debugRepaintTextRainbowEnabled = true;
   // debugProfilePaintsEnabled = true;
