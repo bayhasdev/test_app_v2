@@ -18,7 +18,7 @@ class _ScrollToElementState extends State<ScrollToElement> {
       intList.add(i);
     }
     list = intList.map((element) => ListItem(index: element)).toList();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       ListItem item = list.elementAt(70);
       Scrollable.ensureVisible(item.itemKey.currentContext!);
     });

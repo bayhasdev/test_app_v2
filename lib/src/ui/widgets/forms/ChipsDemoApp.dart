@@ -350,17 +350,31 @@ class ChipsInputState<T> extends State<ChipsInput<T>> implements TextInputClient
 
   @override
   void showAutocorrectionPromptRect(int start, int end) {}
+
+  @override
+  void insertTextPlaceholder(Size size) {
+    // TODO: implement insertTextPlaceholder
+  }
+
+  @override
+  void removeTextPlaceholder() {
+    // TODO: implement removeTextPlaceholder
+  }
+
+  @override
+  void showToolbar() {
+    // TODO: implement showToolbar
+  }
 }
 
 class _TextCaret extends StatefulWidget {
+  final Duration duration = const Duration(milliseconds: 500);
+  final bool resumed;
+
   const _TextCaret({
     Key? key,
-    this.duration = const Duration(milliseconds: 500),
     this.resumed = false,
   }) : super(key: key);
-
-  final Duration duration;
-  final bool resumed;
 
   @override
   _TextCursorState createState() => _TextCursorState();

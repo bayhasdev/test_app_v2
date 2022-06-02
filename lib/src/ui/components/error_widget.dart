@@ -10,14 +10,14 @@ class ErrorWidgets {
       ),
       color: Colors.green,
       child: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
+        child: ListView(
+          padding: const EdgeInsets.all(8.0),
+          children: [
+            Text(
               details.exception.toString(),
               textAlign: TextAlign.center,
-            ),
-          ),
+            )
+          ],
         ),
       ),
     );

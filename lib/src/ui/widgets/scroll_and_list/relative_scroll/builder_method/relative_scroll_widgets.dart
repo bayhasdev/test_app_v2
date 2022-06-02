@@ -34,7 +34,7 @@ class ShopCard extends StatelessWidget {
   const ShopCard({required this.model, required this.index, required this.onHeight});
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       onHeight((context.size!.height) / (model.products.length / RelativeScrollProvider.gridColumnCount));
     });
     return Column(

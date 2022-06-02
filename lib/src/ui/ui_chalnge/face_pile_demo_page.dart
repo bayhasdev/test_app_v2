@@ -103,7 +103,7 @@ class _FacePileState extends State<FacePile> with SingleTickerProviderStateMixin
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _syncUsersWithPile();
     });
   }
@@ -112,7 +112,7 @@ class _FacePileState extends State<FacePile> with SingleTickerProviderStateMixin
   void didUpdateWidget(FacePile oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       _syncUsersWithPile();
     });
   }
