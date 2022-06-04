@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/ui_chalnge/face_pile_demo_page.dart';
+import 'package:test_app_v2/src/ui/ui_chalnge/radio_slider_page.dart';
 
 class UIChalnage extends StatefulWidget {
   static const String routeName = '/UIChalnage';
@@ -21,6 +22,7 @@ class _UIChalnageState extends State<UIChalnage> {
         child: ListView(
           children: const [
             ListViewSingleItem(title: 'Face Pile Demo ', navigationWidget: FacePileDemoScreen()),
+            ListViewSingleItem(title: 'Radio Slider Page ', navigationWidget: RadioSliderPage()),
           ],
         ),
       ),
