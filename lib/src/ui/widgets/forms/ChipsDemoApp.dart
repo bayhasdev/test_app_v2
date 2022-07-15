@@ -352,19 +352,13 @@ class ChipsInputState<T> extends State<ChipsInput<T>> implements TextInputClient
   void showAutocorrectionPromptRect(int start, int end) {}
 
   @override
-  void insertTextPlaceholder(Size size) {
-    // TODO: implement insertTextPlaceholder
-  }
+  void insertTextPlaceholder(Size size) {}
 
   @override
-  void removeTextPlaceholder() {
-    // TODO: implement removeTextPlaceholder
-  }
+  void removeTextPlaceholder() {}
 
   @override
-  void showToolbar() {
-    // TODO: implement showToolbar
-  }
+  void showToolbar() {}
 }
 
 class _TextCaret extends StatefulWidget {

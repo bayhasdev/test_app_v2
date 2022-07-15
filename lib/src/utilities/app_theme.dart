@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'colors.dart';
+
 class AppTheme {
   static const String fontFamily = 'Tajawal';
 
@@ -11,28 +13,18 @@ class AppTheme {
   static const double borderRadiusValue = 5.0;
   static const BorderRadius borderRadius = BorderRadius.all(Radius.circular(borderRadiusValue));
 
-  static InputDecoration getBorderdTextFieldDecoration({String? lable, String? hint, EdgeInsets? contentPadding}) {
+  static InputDecoration getDefultTextFieldDecoration({
+    String? lable,
+    String? hint,
+    EdgeInsets? contentPadding,
+    bool isDense = false, 
+  }) {
     return InputDecoration(
       labelText: lable,
       hintText: hint,
-      labelStyle: const TextStyle(fontSize: 16),
-      isDense: true,
-      contentPadding: contentPadding ?? contentPadding,
-      border: const OutlineInputBorder(borderSide: BorderSide()),
-      focusedBorder: const OutlineInputBorder(borderSide: BorderSide()),
-    );
-  }
-
-  static InputDecoration getFilledTextFieldDecoration({String? lable, String? hint, EdgeInsets? contentPadding}) {
-    return InputDecoration(
-      labelText: lable,
-      hintText: hint,
-      fillColor: Colors.grey.shade100,
-      filled: true,
-      labelStyle: const TextStyle(fontSize: 16),
-      isDense: false,
-      contentPadding: contentPadding ?? contentPadding,
-      border: InputBorder.none,
+      isDense: isDense,
+      contentPadding: contentPadding ?? const EdgeInsets.symmetric(horizontal: 4, vertical: 5),
+      focusColor: kPrimaryColor,
     );
   }
 
@@ -41,7 +33,21 @@ class AppTheme {
       labelText: lable,
       hintText: hint,
       labelStyle: const TextStyle(fontSize: 12),
-      contentPadding: contentPadding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      border: InputBorder.none,
+      isDense: true,
+      contentPadding: contentPadding ?? const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+    );
+  }
+
+  static InputDecoration getBorderedTextFieldDecoration({String? lable, String? hint, EdgeInsets? contentPadding}) {
+    return InputDecoration(
+      labelText: lable,
+      hintText: hint,
+      isDense: true,
+      labelStyle: const TextStyle(fontSize: 12),
+      contentPadding: contentPadding ?? const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+      border: const OutlineInputBorder(borderSide: BorderSide(color: kGreyLight)),
+      focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: kGreyLight)),
     );
   }
 
@@ -49,10 +55,28 @@ class AppTheme {
     return BoxDecoration(border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(borderRadiusValue));
   }
 
-  static void setstatusBarColor({Color color = Colors.white, Brightness? brightness}) {
+  static void setstatusBarColor({Color color = kCardBackground, Brightness? brightness}) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: color,
       statusBarIconBrightness: brightness ?? Brightness.dark,
     ));
   }
+
+  static const flatButtonTextStyle1 = TextStyle(
+    color: kAccentColor,
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const numberStyle = TextStyle(fontSize: 15.0, color: Colors.black, height: 1.1, fontFamily: fontFamily);
+  static const linkStyle = TextStyle(fontSize: 15.0, color: kPrimaryColor, decoration: TextDecoration.underline);
+
+  static const currencyIntegerStyleLarg = TextStyle(fontSize: 22.0, color: kAccentColor, fontWeight: FontWeight.bold, fontFamily: fontFamily);
+  static const currencyIntegerStyleSmall = TextStyle(fontSize: 16.0, color: kAccentColor, fontWeight: FontWeight.bold, fontFamily: fontFamily);
+  static const currencyDecimalStyleLarg = TextStyle(fontSize: 16.0, color: kAccentColor, fontFamily: fontFamily);
+  static const currencyDecimalStyleSmall = TextStyle(fontSize: 12.0, color: kAccentColor, fontFamily: fontFamily);
+  static const currencyStringStyleLarg = TextStyle(fontSize: 20.0, color: kAccentColor, fontWeight: FontWeight.w600, fontFamily: fontFamily);
+  static const currencyStringStyleSmall = TextStyle(fontSize: 13.0, color: kAccentColor, fontWeight: FontWeight.w600, fontFamily: fontFamily);
+
+  static const discountCurrencyStyle = TextStyle(fontSize: 12.0, color: Colors.black, decoration: TextDecoration.lineThrough, fontFamily: fontFamily);
 }

@@ -16,9 +16,7 @@ class PaymentTemplatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Payment Template Page'),
-      ),
+      appBar: AppBar(title: Text('Payment Template Page')),
       body: SafeArea(
         child: ListView(
           children: [
@@ -27,7 +25,7 @@ class PaymentTemplatePage extends StatelessWidget {
                 onPressed: () {
                   if (formKey.currentState?.validate() ?? false) log('payment form is valid');
                 },
-                child: Text('submit')),
+                child: Text(str.formAndAction.send)),
           ],
         ),
       ),
@@ -99,8 +97,8 @@ class _PaymentFormSectionState extends State<PaymentFormSection> {
               LengthLimitingTextInputFormatter(4),
             ],
             keyboardType: TextInputType.number,
-            decoration: AppTheme.getFilledTextFieldDecoration(hint: 'str.app.year'),
-            validator: (value) => GlobalVar.checkString(value) || (int.tryParse(value!) == null) ? 'str.msg.fillFieldInt' : null,
+            decoration: AppTheme.getDefultTextFieldDecoration(hint: str.dateTime.year),
+            validator: (value) => !value.valid() || (int.tryParse(value!) == null) ? str.msg.fillFieldInt : null,
             onChanged: (String value) => provider.paymentModel.year = value,
           ),
         ),
@@ -115,8 +113,8 @@ class _PaymentFormSectionState extends State<PaymentFormSection> {
               CardMonthInputFormatter(),
             ],
             keyboardType: TextInputType.number,
-            decoration: AppTheme.getFilledTextFieldDecoration(hint: 'str.app.month'),
-            validator: (value) => GlobalVar.checkString(value) || (int.tryParse(value!) == null) ? 'str.msg.fillFieldInt' : null,
+            decoration: AppTheme.getDefultTextFieldDecoration(hint: str.dateTime.month),
+            validator: (value) => !value.valid() || (int.tryParse(value!) == null) ? str.msg.fillFieldInt : null,
             onChanged: (String value) => provider.paymentModel.month = value,
           ),
         ),
@@ -135,8 +133,8 @@ class _PaymentFormSectionState extends State<PaymentFormSection> {
           CardNumberInputFormatter(),
         ],
         keyboardType: TextInputType.number,
-        decoration: AppTheme.getFilledTextFieldDecoration(hint: 'str.app.creditCardNumber'),
-        validator: (value) => GlobalVar.checkString(value) || (int.tryParse(getCleanedNumber(value!)) == null) ? 'str.msg.fillFieldInt' : null,
+        decoration: AppTheme.getDefultTextFieldDecoration(hint: str.payment.creditCardNumber),
+        validator: (value) => !value.valid() || (int.tryParse(getCleanedNumber(value!)) == null) ? str.msg.fillFieldInt : null,
         onChanged: (String value) => provider.paymentModel.number = getCleanedNumber(value),
       ),
     );
@@ -152,8 +150,8 @@ class _PaymentFormSectionState extends State<PaymentFormSection> {
           LengthLimitingTextInputFormatter(4),
         ],
         keyboardType: TextInputType.number,
-        decoration: AppTheme.getFilledTextFieldDecoration(hint: 'str.app.ccv'),
-        validator: (value) => GlobalVar.checkString(value) || (int.tryParse(value!) == null) ? 'str.msg.fillFieldInt' : null,
+        decoration: AppTheme.getDefultTextFieldDecoration(hint: str.payment.ccv),
+        validator: (value) => !value.valid() || (int.tryParse(value!) == null) ? str.msg.fillFieldInt : null,
         onChanged: (String value) => provider.paymentModel.cvc = getCleanedNumber(value),
       ),
     );
@@ -165,11 +163,11 @@ class _PaymentFormSectionState extends State<PaymentFormSection> {
         Expanded(
           child: TextFormField(
             initialValue: provider.paymentModel.nameOnCard,
-            decoration: AppTheme.getFilledTextFieldDecoration(hint: 'str.app.nameOnCard'),
+            decoration: AppTheme.getDefultTextFieldDecoration(hint: str.payment.nameOnCard),
             inputFormatters: [
               LengthLimitingTextInputFormatter(45),
             ],
-            validator: (value) => !GlobalVar.checkString(value) ? 'str.msg.invalidName' : null,
+            validator: (value) => !value.valid() ? str.msg.invalidName : null,
             onChanged: (String value) => provider.paymentModel.nameOnCard = value,
           ),
         ),

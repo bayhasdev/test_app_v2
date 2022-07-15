@@ -1,6 +1,9 @@
 import 'dart:developer' as developer;
 
 import 'package:flutter/foundation.dart';
+import 'package:test_app_v2/generated/locale_base.dart';
+
+late LocaleBase str;
 
 class GlobalVar {
   static String getString(String? string, [String defultValue = ""]) => string ?? defultValue;
