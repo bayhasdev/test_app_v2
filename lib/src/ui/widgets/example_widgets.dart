@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:test_app_v2/src/ui/components/app_widgets.dart';
+import 'package:test_app_v2/src/ui/components/custom_icons.dart';
 import '../../../main_imports.dart';
 
 class ExampleWidgets extends StatelessWidget {
@@ -17,12 +18,22 @@ class ExampleWidgets extends StatelessWidget {
               child: ListView(
                 children: [
                   _dynamicWidgetHieght(),
+                  _customIcons(),
                 ],
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Row _customIcons() {
+    return Row(
+      children: const [
+        Text('CustomIcons : '),
+        Icon(CustomIcons.catchReceipt, size: 25, color: Colors.red),
+      ],
     );
   }
 
