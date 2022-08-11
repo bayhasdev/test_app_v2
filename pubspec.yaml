@@ -29,9 +29,10 @@ environment:
 dependencies:
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
-  flutter_localizations:
-    sdk: flutter
   flutter:
+    sdk: flutter
+  flutter_fortune_wheel: ^1.2.0
+  flutter_localizations:
     sdk: flutter
   flutter_section_list: ^1.1.1
   flutter_wall_layout: ^2.1.1
