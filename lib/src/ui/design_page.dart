@@ -5,6 +5,7 @@ import 'package:test_app_v2/src/ui/components/app_widgets.dart';
 import 'package:test_app_v2/src/ui/design/animation/_animation_index.dart';
 import 'package:test_app_v2/src/ui/design/bottom_navigation/_bottom_navigation_index.dart';
 import 'package:test_app_v2/src/ui/design/circular_background.dart';
+import 'package:test_app_v2/src/ui/design/shapes/index.dart';
 
 class DesignPage extends StatefulWidget {
   static const String routeName = '/DesigPage';
@@ -23,6 +24,7 @@ class _DesignPageState extends State<DesignPage> {
         child: ListView(
           children: [
             ListViewSingleItem(title: 'Animations', navigationWidget: AnimationIndex()),
+            ListViewSingleItem(title: 'Shapes Page', navigationWidget: ShapesPage()),
             ListViewSingleItem(title: 'BottomNavigationIndex', navigationWidget: BottomNavigationIndex()),
             ListViewSingleItem(title: 'CircularBackgroundPage', navigationWidget: CircularBackgroundPage()),
             MergeSemantics(),

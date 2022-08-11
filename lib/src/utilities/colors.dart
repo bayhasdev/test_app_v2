@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 const kPrimaryColor = Color(0xFF00DAB0);
 const kAccentColor = Color(0xFF03A0C2);
 
@@ -26,12 +25,17 @@ const kGreyDark = Color(0xFF757575);
 const kIconColor = Color(0xff0b368e);
 const kStatusBarColor = Color(0xff00CDA2);
 
-
 const colorsList = [
   Colors.orange,
   Colors.green,
   Colors.amber,
   Colors.blue,
+  Colors.red,
+  Colors.orange,
+  Colors.indigo,
+  Colors.blue,
+  Colors.deepOrange,
+  Colors.green,
   Colors.red,
   Colors.indigo,
   Colors.orange,
